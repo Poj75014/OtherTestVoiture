@@ -4219,7 +4219,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   rpmBiasCurveLimit: Infinity
   axleFriction: 0
-  frictionSmoothness: 0.5
+  frictionSmoothness: 0
   forwardFriction: 5
   sidewaysFriction: 4
   forwardRimFriction: 1
@@ -5774,7 +5774,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   rpmBiasCurveLimit: Infinity
   axleFriction: 0
-  frictionSmoothness: 0.5
+  frictionSmoothness: 0
   forwardFriction: 5
   sidewaysFriction: 4
   forwardRimFriction: 1
