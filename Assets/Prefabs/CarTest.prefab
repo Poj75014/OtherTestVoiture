@@ -254,7 +254,8 @@ GameObject:
   - component: {fileID: 114387199762072486}
   - component: {fileID: 114947784629760184}
   - component: {fileID: 114491179796514622}
-  - component: {fileID: 114815122689713686}
+  - component: {fileID: 114841784852588502}
+  - component: {fileID: 114108271382050450}
   m_Layer: 9
   m_Name: CarTest
   m_TagString: Player
@@ -2080,6 +2081,20 @@ MonoBehaviour:
   sparks: {fileID: 0}
   cameraDistanceChange: 0
   cameraHeightChange: 0
+--- !u!114 &114108271382050450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1260849908958788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6aa3f7bef2bcec4ba2350f84a75275f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boostForce: 50000
+  downforceDuringBoost: 200
+  boostParticles: []
 --- !u!114 &114178360042800232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2395,7 +2410,7 @@ MonoBehaviour:
   minPitch: 0.5
   maxPitch: 1.5
   canBoost: 0
-  boost: 1
+  boost: 0
   boostPowerCurve:
     serializedVersion: 2
     m_Curve:
@@ -2433,10 +2448,10 @@ MonoBehaviour:
       outSlope: 0.061536875
       tangentMode: 0
     - serializedVersion: 2
-      time: 4.180513
-      value: 0.99924433
-      inSlope: 0
-      outSlope: 0
+      time: 4.17247
+      value: 0.94744974
+      inSlope: -0.02773794
+      outSlope: -0.02773794
       tangentMode: 0
     - serializedVersion: 2
       time: 8.0434
@@ -2554,7 +2569,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   driftPush: 2
   straightenAssist: 1
-  downforce: 2
+  downforce: 10
   invertDownforceInReverse: 0
   applyDownforceInAir: 1
   downforceCurve:
@@ -3186,7 +3201,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 924e1fe7ec9ad5c46854caa913b495ce, type: 2}
   debrisParticles: []
   sparks: {fileID: 0}
---- !u!114 &114815122689713686
+--- !u!114 &114841784852588502
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -3194,37 +3209,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 1260849908958788}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6dee7fcfc87f8c4db46af1184aecc6b, type: 3}
+  m_Script: {fileID: 11500000, guid: 964d5ddbd44016142b8e252579b22ec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 35
   dashAngleInDegrees: 0
-  duration: 0.5
+  duration: 0.4
   cooldown: 0
-  speedVariation:
+  a:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 2
       time: 0
-      value: 0.1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 0.9
-      value: 1
+      time: 0.5
+      value: 3
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     - serializedVersion: 2
       time: 1
-      value: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 10
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

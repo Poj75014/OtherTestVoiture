@@ -1053,7 +1053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 35
   dashAngleInDegrees: 0
-  duration: 0.5
+  duration: 0.4
   cooldown: 0
   a:
     serializedVersion: 2
@@ -4097,7 +4097,7 @@ Prefab:
     - target: {fileID: 114517449389991808, guid: b77834bdeb3cb474fb75a2a2bdbf934a,
         type: 2}
       propertyPath: downforce
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 54850092900697444, guid: b77834bdeb3cb474fb75a2a2bdbf934a,
         type: 2}
@@ -4132,12 +4132,17 @@ Prefab:
     - target: {fileID: 114231154618455764, guid: b77834bdeb3cb474fb75a2a2bdbf934a,
         type: 2}
       propertyPath: canBoost
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114231154618455764, guid: b77834bdeb3cb474fb75a2a2bdbf934a,
         type: 2}
       propertyPath: boost
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 54850092900697444, guid: b77834bdeb3cb474fb75a2a2bdbf934a,
+        type: 2}
+      propertyPath: m_Drag
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114815122689713686, guid: b77834bdeb3cb474fb75a2a2bdbf934a, type: 2}
