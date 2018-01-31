@@ -25,9 +25,9 @@ public class VehicleSideDash : SideDash
 
     private void FixedUpdate ()
     {
-        if (Input.GetKeyDown(KeyCode.A) && base.available)
+        if (Input.GetKeyDown(KeyCode.Joystick1Button4) && base.available)
             this.Jump(Direction.left);
-        if (Input.GetKeyDown(KeyCode.E) && base.available)
+        if (Input.GetKeyDown(KeyCode.Joystick1Button5) && base.available)
             this.Jump(Direction.right);
     }
 
