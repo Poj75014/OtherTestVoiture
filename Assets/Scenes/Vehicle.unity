@@ -1035,6 +1035,56 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 257063929}
   m_Mesh: {fileID: 4300008, guid: 391b6d5d8f090b247a5a64590b2de065, type: 3}
+--- !u!1 &268665761 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1260849908958788, guid: b77834bdeb3cb474fb75a2a2bdbf934a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1421684060}
+--- !u!114 &268665762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 268665761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964d5ddbd44016142b8e252579b22ec9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 35
+  dashAngleInDegrees: 0
+  duration: 0.5
+  cooldown: 0
+  a:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.5
+      value: 3
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 10
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &278713413
 GameObject:
   m_ObjectHideFlags: 0
@@ -4044,7 +4094,18 @@ Prefab:
       propertyPath: electricityBarSlider
       value: 
       objectReference: {fileID: 730170711}
-    m_RemovedComponents: []
+    - target: {fileID: 114517449389991808, guid: b77834bdeb3cb474fb75a2a2bdbf934a,
+        type: 2}
+      propertyPath: downforce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 54850092900697444, guid: b77834bdeb3cb474fb75a2a2bdbf934a,
+        type: 2}
+      propertyPath: m_Mass
+      value: 5000
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114815122689713686, guid: b77834bdeb3cb474fb75a2a2bdbf934a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b77834bdeb3cb474fb75a2a2bdbf934a, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1433388519
