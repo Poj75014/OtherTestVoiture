@@ -29,7 +29,7 @@ public class Jump : MonoBehaviour
 	
 	void FixedUpdate ()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && this.available)
+        if (Input.GetKeyDown(KeyCode.Joystick1Button3) && this.available)
             this.Execute();
     }
     
