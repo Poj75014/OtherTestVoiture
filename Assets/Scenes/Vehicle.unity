@@ -4054,6 +4054,11 @@ Prefab:
       propertyPath: frictionSmoothness
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 54850092900697444, guid: b77834bdeb3cb474fb75a2a2bdbf934a,
+        type: 2}
+      propertyPath: m_Drag
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b77834bdeb3cb474fb75a2a2bdbf934a, type: 2}
   m_IsPrefabParent: 0
