@@ -426,6 +426,7 @@ GameObject:
   - component: {fileID: 114491179796514622}
   - component: {fileID: 114841784852588502}
   - component: {fileID: 114108271382050450}
+  - component: {fileID: 114834616185657594}
   m_Layer: 9
   m_Name: CarTest
   m_TagString: Player
@@ -2309,7 +2310,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1260849908958788}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 2, y: 1.03, z: 114.66}
+  m_LocalPosition: {x: 2, y: 1, z: 114.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4778769504860802}
@@ -7229,6 +7230,20 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 924e1fe7ec9ad5c46854caa913b495ce, type: 2}
   debrisParticles: []
   sparks: {fileID: 0}
+--- !u!114 &114834616185657594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1260849908958788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca6735c7c2e0caf4d876b6aac785df58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 15
+  dashAngleInDegrees: 90
+  cooldown: 3
 --- !u!114 &114841784852588502
 MonoBehaviour:
   m_ObjectHideFlags: 1
