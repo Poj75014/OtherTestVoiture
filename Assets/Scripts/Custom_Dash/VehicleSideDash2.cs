@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VehicleSideDash : SideDash
+public class VehicleSideDash2 : SideDash
 {
 
     //TODO List
