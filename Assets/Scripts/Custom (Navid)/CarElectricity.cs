@@ -14,12 +14,13 @@ public class CarElectricity : MonoBehaviour
 
     public void ElectricityReduction()
     {
-        electricityBarSlider.value -= Time.deltaTime * electricityReductionPerSecond;
+        if(electricityBarSlider != null)
+            electricityBarSlider.value -= Time.deltaTime * electricityReductionPerSecond;
     }
 
     private void OnTriggerStay(Collider collider)
     {
-        if (collider.gameObject.tag == "ElectricityReloader")
+        if (collider.gameObject.tag == "ElectricityReloader" && electricityBarSlider != null)
         {
             electricityBarSlider.value += Time.deltaTime * electricityReloadPerSecond;
         }

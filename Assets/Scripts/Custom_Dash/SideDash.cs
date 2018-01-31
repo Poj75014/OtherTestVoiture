@@ -10,9 +10,12 @@ public abstract class SideDash : MonoBehaviour
     public float speed;
     public float dashAngleInDegrees;
     public float duration;
+    [Tooltip("x = time % (0 -> 1) y  = factor")]
+    public AnimationCurve dashFactor = new AnimationCurve(new Keyframe(0, 1),new Keyframe(1,0));
     public float cooldown;
 
     protected bool available;
+    //protected Vector3 calcVelocity;
 
     //protected IGround groundProperties;
     
