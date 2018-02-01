@@ -30,12 +30,12 @@ namespace RVP
             if(!isLocalPlayer)
                 return;
                 
-            m_syncSteer = m_vp.inputSteer;
+            m_syncSteer = m_vp.steerInput;
         }
         
         void OnSyncSteerChange(float steer){
             m_syncSteer = steer;
-            m_vp.inputSteer = steer;
+            m_vp.steerInput = steer;
         }
         
     }
