@@ -5,10 +5,16 @@ namespace RVP
 {
     public class VehicleNetwork : NetworkBehaviour
     {
+    
+    VehicleParent m_vp;
+    
+    [SyncVar(hook = "OnSyncSteerChange") ]
+    float m_syncSteer;
 
         // Use this for initialization
         void Start()
         {
+        m_vp = GetComponent<VehicleParent>();
             if (!isLocalPlayer)
             {
                 this.GetComponent<BasicInput>().enabled = false;
@@ -19,5 +25,18 @@ namespace RVP
                 Camera.main.GetComponent<CameraControl>().Initialize();
             }
         }
+        
+        void FixedUpdate(){
+            if(!isLocalPlayer)
+                return;
+                
+            m_syncSteer = m_vp.inputSteer;
+        }
+        
+        void OnSyncSteerChange(float steer){
+            m_syncSteer = steer;
+            m_vp.inputSteer = steer;
+        }
+        
     }
 }
