@@ -74,7 +74,7 @@ namespace RVP
         void Update()
         {
             //Check for continuous marking
-            if (w.grounded)
+            if (w.grounded /*fixed exeption -> */ && GroundSurfaceMaster.surfaceTypesStatic.Length > 0 && w.contactPoint.surfaceType < GroundSurfaceMaster.surfaceTypesStatic.Length)
             {
                 alwaysScrape = GroundSurfaceMaster.surfaceTypesStatic[w.contactPoint.surfaceType].alwaysScrape ? slipThreshold + Mathf.Min(0.5f, Mathf.Abs(w.rawRPM * 0.001f)) : 0;
             }
