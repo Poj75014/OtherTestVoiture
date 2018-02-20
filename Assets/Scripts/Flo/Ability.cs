@@ -8,7 +8,7 @@ namespace Ability
     {
         private bool _available;
 
-        protected bool Available
+        public bool Available
         {
             get { return _available; }
             set { _available = value; }

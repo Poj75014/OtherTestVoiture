@@ -8,23 +8,35 @@ namespace Ability
     {
         [SerializeField]
         private float _cooldown;
+        private float _remainingCooldown;
 
-        protected float Cooldown
+        public float RemainingCooldown
         {
-            get { return _cooldown; }
-            set { _cooldown = value; }
+            get { return _remainingCooldown; }
         }
 
-        public IEnumerator LaunchCooldown()
+        public float Cooldown
         {
-            Available = false;
-            yield return new WaitForSeconds(Cooldown);
-            Available = true;
+            get { return _cooldown; }
+        }
+
+        protected IEnumerator LaunchCooldown()
+        {
+            base.Available = false;
+            _remainingCooldown = _cooldown;
+
+            while (_remainingCooldown > 0)
+            {
+                yield return null;
+                _remainingCooldown -= Time.deltaTime;
+            }
+
+            base.Available = true;
         }
 
         public void RefreshCooldown()
         {
-            this.Available = true;
+            base.Available = true;
             StopCoroutine(LaunchCooldown());
         }
 
