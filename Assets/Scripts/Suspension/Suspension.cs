@@ -153,6 +153,10 @@ namespace RVP
         [System.NonSerialized]
         public bool jammed;
 
+        [Header("Jump : Suspension Dampening")]
+        public float targetedVerticalVelocity = -8;
+        public float newSpringDampening = 15;
+
         void Start()
         {
             tr = transform;
@@ -284,7 +288,17 @@ namespace RVP
                 //Apply the suspension force
                 if (suspensionDistance > 0 && targetCompression > 0)
                 {
+                    if (travelVel < targetedVerticalVelocity)
+                    {
+                        springDampening = newSpringDampening;
+                    }
+
                     Vector3 appliedSuspensionForce = (leaningForce ? Vector3.Lerp(upDir, vp.norm.forward, Mathf.Abs(Mathf.Pow(Vector3.Dot(vp.norm.forward, vp.upDir), 5))) : vp.norm.forward) * springForce * (Mathf.Pow(springForceCurve.Evaluate(1 - compression), Mathf.Max(1, springExponent)) - (1 - targetCompression) - springDampening * Mathf.Clamp(travelVel, -1, 1));
+
+                    if (travelVel < targetedVerticalVelocity)
+                    {
+                        springDampening = 1;
+                    }
 
                     rb.AddForceAtPosition(
                         appliedSuspensionForce
