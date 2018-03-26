@@ -29,7 +29,7 @@ public class OldJump : MonoBehaviour
 	
 	void FixedUpdate ()
     {
-        if ((Input.GetKeyDown(KeyCode.Joystick1Button3) || Input.GetKeyDown(KeyCode.LeftControl)) && this.available)
+        if ((Input.GetKeyDown(KeyCode.Joystick1Button3) || Input.GetKeyDown(KeyCode.J)) && this.available)
             this.Execute();
     }
     
